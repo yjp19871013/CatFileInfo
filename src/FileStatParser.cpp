@@ -106,7 +106,7 @@ string FileStatParser::transferTmToStr(struct tm t) {
 }
 
 string FileStatParser::getFileSize(struct stat s) {
-	long size = s.st_blksize * s.st_blocks;
+	long size = s.st_size;
 	stringstream ostr;
 	ostr << size << " B";
 	return ostr.str();
